@@ -1,0 +1,11 @@
+
+.matrixp {
+    
+    max-width: 500px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    letter-spacing: 0.1em;
+    color: #e4d808;
+    filter: drop-shadow(0 0 2px #e4d808);
+ 
+}

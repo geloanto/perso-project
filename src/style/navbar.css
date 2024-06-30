@@ -1,0 +1,29 @@
+a {
+    color: #c72d04;
+    transition: 1s;
+}
+
+a:hover {
+    color: #ffd52c;
+    cursor: url("/noun-meteorite-198337.svg"), auto;
+}
+
+
+
+body,
+html {
+    cursor: url("/noun-meteorite-198337.svg"), auto;
+
+}
+.cacher {
+    color: #111;
+    transition: 1s;
+}
+ul,
+li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+
+}

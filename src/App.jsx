@@ -10,6 +10,7 @@ import ScreenFour from "./components/screen4";
 import ScreenThree from "./components/screen3";
 import ScreenTwo from "./components/screen2";
 
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -34,7 +35,6 @@ const data = [
   { id: 5, name: "Damien", age: 32, speciality: "Full-Stack Dev" },
   { id: 6, name: "Alex", age: 34, speciality: "Full-Stack dev" },
   { id: 7, name: "monica", age: 35, speciality: "Full-Stack dev" },
-  { id: 8, name: "", age: 30, speciality: "Full-Stack dev" },
 ];
 
 export default function App() {
@@ -49,7 +49,7 @@ export default function App() {
     setText(ptransforme);
     setTimeout(() => {
       setText(paragraphe);
-    }, 2000);
+    }, 1000);
   };
   return (
     <div className="retro-container scanline-effect">
@@ -98,6 +98,7 @@ export default function App() {
         </section>
         <ScreenThree /> 
         <ScreenFour />
+        
         
       </main>
       <Footer />

@@ -1,26 +1,76 @@
-const ScreenFour = () => {
-    return (
-       
-        <section id="screen-4">
-          <article>
-            <header>
-              <h2>HIDE GAMES</h2>
-            </header>
-            <div className="content"></div>
-            <figure>
-                <div className="game">
-                  <button className="start_btn">start / restart</button>
-                  <div className="game_info">
-                    <span className="score">Score : 0</span><br></br>
-                    <span className="Temps">Temps : 0</span>
-                  </div>
-                  <div className=".container">
-                  </div>
-                </div>
-                
-            </figure>
-          </article>
-        </section>
-    )
+import { useState, useEffect } from 'react';
+
+
+function ScreenFour () {
+  const [score, setScore] = useState(0);
+  const [time, setTime] = useState(60);
+  const [targets, setTargets] = useState([]);
+  const [intervalId, setIntervalId] = useState(null);
+
+  const startGame = () => {
+    setScore(0);
+    setTime(60);
+    setTargets([]);
+    clearInterval(intervalId);
+
+    const newIntervalId = setInterval(() => {
+      showTarget();
+      setTime((prevTime) => prevTime - 1);
+    }, 1000);
+
+    setIntervalId(newIntervalId);
+  };
+
+  useEffect(() => {
+    if (time === 0) {
+      clearInterval(intervalId);
+    }
+  }, [time, intervalId]);
+
+  const showTarget = () => {
+    const targetId = Date.now();
+    const newTarget = {
+      id: targetId,
+      top: Math.random() * 500,
+      left: Math.random() * 600,
+    };
+    setTargets((prevTargets) => [...prevTargets, newTarget]);
+
+    setTimeout(() => {
+      setTargets((prevTargets) => prevTargets.filter((target) => target.id !== targetId));
+    }, 2000);
+  };
+
+  const handleTargetClick = (id) => {
+    setScore((prevScore) => prevScore + 1);
+    setTargets((prevTargets) => prevTargets.filter((target) => target.id !== id));
+  };
+
+  return (
+    <section id="screen-4">
+    <div className="container">
+      <button className="start_btn" onClick={startGame}>Start / Restart</button>
+      <div className="score">Score: {score}</div>
+      <div className="time">Temps: {time}</div>
+      {time === 0 ? (
+        <div className="you-win">You win😎</div>
+      ) : (
+        targets.map((target) => (
+          <img
+            key={target.id}
+            id="target"
+            src="src/Layer 2.png"
+            alt="target"
+            style={{ position: 'absolute', top: target.top, left: target.left }}
+            onClick={() => handleTargetClick(target.id)}
+          />
+        ))
+      )}
+    </div>
+    </section>
+  );
 }
+
 export default ScreenFour;
+
+

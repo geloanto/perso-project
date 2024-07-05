@@ -64,7 +64,7 @@ function ScreenFour () {
           <img
             key={target.id}
             id="target"
-            src="src/Layer 2.png"
+            src="public/Layer 2.png"
             alt="target"
             style={{ position: 'absolute', top: target.top, left: target.left }}
             onClick={() => handleTargetClick(target.id)}

@@ -70,7 +70,7 @@ export default function App() {
             </li>
             <li>
               <a className="cacher" href="#screen-4">
-                ???
+                .
               </a>
             </li>
           </ul>

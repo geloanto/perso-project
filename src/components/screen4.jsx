@@ -48,13 +48,18 @@ function ScreenFour () {
 
   return (
     <section id="screen-4">
-    <div className="container">
-      <button className="start_btn" onClick={startGame}>Start / Restart</button>
+    <button className="start_btn" onClick={startGame}>Start / Restart</button>
+      <div className="container">
       <div className="score">Score: {score}</div>
-      <div className="time">Temps: {time}</div>
-      {time === 0 ? (
-        <div className="you-win">You win😎</div>
-      ) : (
+        <div className="time">Temps: {time}</div>
+        {time === 0 ? (
+          score >= 55 ? (
+            <div className="you-win">You win😎</div>
+          ) : (
+            <div className="you-lose">You lose😞</div>
+          )
+        ) : (
+        
         targets.map((target) => (
           <img
             key={target.id}

@@ -1,13 +1,14 @@
 table {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 8px 12px;
+    padding: 8px 12px ;
     border: 1px solid #2f302b;
     text-align: left;
+    
 }
 thead tr {
     max-width: 500px;

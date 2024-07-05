@@ -1,6 +1,8 @@
 a {
     color: #c72d04;
     transition: 1s;
+    text-decoration: none;
+
 }
 
 a:hover {
@@ -16,14 +18,17 @@ html {
 
 }
 .cacher {
-    color: #111;
+    color: black;
     transition: 1s;
+    
 }
+
 ul,
 li {
     display: flex;
     list-style: none;
     align-items: center;
     gap: 2rem;
+    
 
 }

@@ -17,14 +17,15 @@ body {
     
 }
 .container {
-    
-    width: 1500px;
-    height: 600px;
+    position: relative;
+    width: 800px;
+    height: 548px;
     margin: 40px auto;
     text-align: end;
     align-items: end;
-
+    border: 1px solid #f1dc1a;
 }
+
  
 .start_btn {
     margin-bottom: 20px;
@@ -52,8 +53,8 @@ body {
     margin-bottom: 20px;
 }
 #target {
-    height: 160px;
-    width: 160px;
+    height: 100px;
+    width: 100px;
     position: absolute;
     transition: 0.25s;
     animation: animateTarget 10s infinite;

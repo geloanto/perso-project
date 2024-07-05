@@ -9,7 +9,7 @@ const ScreenTwo = () => {
             <figure>
               <img
                 className="astro-alien"
-                src="./public\alien-4883391_960_720_pale_yellow.png"
+                src="\alien-4883391_960_720_pale_yellow.png"
                 alt="alien and human touch hands"
               />
             </figure>

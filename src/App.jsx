@@ -84,7 +84,7 @@ export default function App() {
             </header>
             <div className="content"></div>
             <figure>
-              <img className="vaisseau" src="\public\Layer 5.png" alt="astronaute" />
+              <img className="vaisseau" src="\Layer 5.png" alt="astronaute" />
               <div>
                 <Table data={data} />
               </div>
